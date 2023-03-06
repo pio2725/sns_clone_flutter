@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 class Strings {
   static const appName = 'Instagram Clone';
   static const welcomeToAppName = 'Instagram Clone';
-  static const youHaveNoPosts =
-      'You have not made a post yet. Press either the video-upload or the photo-upload buttons to the top of the screen in order to upload your first post!';
+  static const youHaveNoPosts = "Please upload your photos or videos!";
+  // 'You have not made a post yet. Press either the video-upload or the photo-upload buttons to the top of the screen in order to upload your first post!';
   static const noPostsAvailable =
       "Nobody seems to have made any posts yet. Why don't you take the first step and upload your first post?!";
   static const enterYourSearchTerm =
