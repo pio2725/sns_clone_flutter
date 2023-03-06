@@ -5,6 +5,7 @@ import 'package:instagram_clone/state/auth/providers/auth_state_provider.dart';
 import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instagram_clone/state/providers/is_loading_provider.dart';
 import 'package:instagram_clone/views/components/loading/loading_screen.dart';
+import 'package:instagram_clone/views/login/login_view.dart';
 import 'firebase_options.dart';
 import 'dart:developer' as devtools show log;
 
@@ -58,7 +59,7 @@ class MainView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text('MainView')),
-        backgroundColor: const Color.fromARGB(255, 180, 159, 255),
+        backgroundColor: const Color.fromARGB(255, 113, 191, 255),
       ),
       body: Consumer(
         builder: (context, ref, child) {
@@ -69,34 +70,6 @@ class MainView extends StatelessWidget {
             child: const Text("Log Out"),
           );
         },
-      ),
-    );
-  }
-}
-
-class LoginView extends ConsumerWidget {
-  const LoginView({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Center(child: Text('Login View')),
-        backgroundColor: const Color.fromARGB(255, 180, 159, 255),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
-            child: const Text("Sign In With Google"),
-          ),
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).loginWithFaceBook,
-            child: const Text("Sign In With FaceBook"),
-          ),
-        ],
       ),
     );
   }
