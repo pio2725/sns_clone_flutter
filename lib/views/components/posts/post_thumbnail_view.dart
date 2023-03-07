@@ -12,9 +12,12 @@ class PostThumbnailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTapped,
-      child: Image.network(
-        post.thumbnailUrl,
-        fit: BoxFit.cover,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30.0),
+        child: Image.network(
+          post.thumbnailUrl,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

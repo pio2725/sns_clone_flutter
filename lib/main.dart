@@ -28,7 +28,12 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(),
+      theme: ThemeData(
+          primaryColor: Colors.purple,
+          fontFamily: 'poppins',
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Color.fromARGB(255, 116, 166, 237),
+          )),
       home: Consumer(
         builder: (context, ref, child) {
           ref.listen<bool>(isLoadingProvider, (_, isLoading) {

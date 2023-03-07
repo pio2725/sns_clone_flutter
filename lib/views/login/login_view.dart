@@ -16,7 +16,6 @@ class LoginView extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(Strings.appName),
-        backgroundColor: const Color.fromARGB(255, 113, 191, 255),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
