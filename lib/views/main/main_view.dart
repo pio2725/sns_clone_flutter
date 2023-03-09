@@ -34,6 +34,7 @@ class _MainViewState extends ConsumerState<MainView> {
                 if (videoFile == null) {
                   return;
                 }
+                // ignore: unused_result
                 ref.refresh(postSettingProvider);
                 if (!mounted) {
                   return;
@@ -55,6 +56,7 @@ class _MainViewState extends ConsumerState<MainView> {
                 if (imageFile == null) {
                   return;
                 }
+                // ignore: unused_result
                 ref.refresh(postSettingProvider);
                 if (!mounted) {
                   return;
